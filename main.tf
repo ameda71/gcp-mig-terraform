@@ -6,7 +6,7 @@ provider "google" {
 resource "google_compute_instance_template" "web_template" {
   name_prefix = "apache-template-"
   machine_type = var.machine_type
-  region = var.region
+  zone   = var.zone
 
   disk {
     source_image = var.source_image
